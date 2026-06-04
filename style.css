@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #070b10;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.portfolio-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: #070b10;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(18px, 3vw, 34px) clamp(22px, 7vw, 90px);
+  font-size: clamp(12px, 1.2vw, 16px);
+}
+
+.navbar nav {
+  display: flex;
+  gap: clamp(14px, 3vw, 38px);
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #00b7ff;
+}
+
+.phone {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* HOME */
+.home-page {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 5, 9, 0.94) 0%,
+      rgba(2, 5, 9, 0.72) 42%,
+      rgba(2, 5, 9, 0.25) 100%
+    ),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.home-content {
+  position: absolute;
+  left: clamp(28px, 10vw, 150px);
+  top: 50%;
+  transform: translateY(-45%);
+  z-index: 4;
+}
+
+.home-content h2 {
+  font-size: clamp(38px, 6vw, 78px);
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.home-content h1 {
+  font-size: clamp(56px, 9vw, 115px);
+  line-height: 0.9;
+  font-weight: 800;
+}
+
+.home-content p {
+  margin-top: 12px;
+  letter-spacing: clamp(4px, 1vw, 12px);
+  font-size: clamp(14px, 2vw, 28px);
+}
+
+.hero-buttons {
+  margin-top: 34px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: clamp(10px, 1.2vw, 14px) clamp(26px, 3vw, 45px);
+  border-radius: 30px;
+  font-size: clamp(12px, 1.1vw, 16px);
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.social-icons {
+  position: absolute;
+  left: clamp(28px, 10vw, 150px);
+  bottom: 35px;
+  display: flex;
+  gap: 14px;
+  z-index: 5;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* ABOUT */
+.about-page {
+  background: #05070c;
+}
+
+.about-content {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: clamp(50px, 7vw, 90px) clamp(28px, 10vw, 150px);
+  position: relative;
+  z-index: 3;
+}
+
+.about-text {
+  width: 48%;
+  max-width: 620px;
+  z-index: 4;
+}
+
+.about-text h2,
+.portfolio-content h2 {
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.email {
+  margin-top: 12px;
+  color: #c7c7c7;
+  font-size: clamp(12px, 1.2vw, 15px);
+}
+
+.about-desc {
+  margin-top: clamp(55px, 8vw, 105px);
+  max-width: 570px;
+  font-size: clamp(16px, 1.65vw, 23px);
+  line-height: 1.7;
+}
+
+.address {
+  margin-top: clamp(45px, 7vw, 90px);
+  font-size: clamp(12px, 1.2vw, 15px);
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+
+.about-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 46%;
+  height: 100%;
+  background:
+    linear-gradient(
+      90deg,
+      #05070c 0%,
+      rgba(5, 7, 12, 0.2) 42%,
+      rgba(5, 7, 12, 0.75) 100%
+    ),
+    url("./images/1768132301934.png");
+  background-size: cover;
+  background-position: center top;
+  filter: grayscale(100%);
+  z-index: 1;
+}
+
+/* RESUME */
+.resume-page {
+  background:
+    linear-gradient(rgba(8, 11, 18, 0.93), rgba(8, 11, 18, 0.93)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr;
+  gap: clamp(35px, 5vw, 90px);
+  padding: clamp(45px, 7vw, 85px) clamp(28px, 7vw, 110px);
+}
+
+.resume-column h3 {
+  display: inline-block;
+  font-size: clamp(18px, 2vw, 26px);
+  margin-bottom: 25px;
+  border-bottom: 2px solid #00b7ff;
+}
+
+.resume-column h3:not(:first-child) {
+  margin-top: 45px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: clamp(13px, 1.1vw, 16px);
+}
+
+.skill-line {
+  height: 2px;
+  background: #777;
+  margin-top: 8px;
+}
+
+.skill-line span {
+  display: block;
+  height: 2px;
+  background: #fff;
+}
+
+.small-text {
+  font-size: clamp(14px, 1.4vw, 18px);
+  line-height: 1.8;
+  color: #d6d6d6;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.year {
+  min-width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #009fdc;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.timeline-item h4,
+.education h4 {
+  font-size: clamp(14px, 1.2vw, 17px);
+}
+
+.timeline-item p,
+.education p {
+  font-size: clamp(12px, 1vw, 15px);
+  color: #cfcfcf;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(90px, 120px));
+  gap: 25px;
+  margin-top: 22px;
+}
+
+.hobby-grid div {
+  text-align: center;
+}
+
+.hobby-grid i {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 10px;
+}
+
+.hobby-grid span {
+  font-size: clamp(12px, 1vw, 14px);
+}
+
+/* PORTFOLIO */
+.portfolio-page {
+  background:
+    linear-gradient(rgba(5, 7, 12, 0.9), rgba(5, 7, 12, 0.9)),
+    url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-content {
+  padding: clamp(70px, 9vw, 135px) clamp(28px, 10vw, 150px);
+}
+
+.portfolio-content p {
+  margin-top: 14px;
+  color: #ccc;
+  font-size: clamp(14px, 1.4vw, 18px);
+}
+
+.project-grid {
+  margin-top: clamp(35px, 5vw, 65px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  padding: clamp(32px, 4vw, 60px) clamp(24px, 3vw, 40px);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  min-height: 260px;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.project-card h4 {
+  font-size: clamp(18px, 1.6vw, 24px);
+  margin-bottom: 16px;
+}
+
+.project-card p {
+  font-size: clamp(13px, 1.1vw, 16px);
+  line-height: 1.7;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 18px;
+    color: #00b7ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+
+  /* ======================
+   TYPING CURSOR
+====================== */
+
+#typingText {
+    color: #fff;
+  }
+  
+  #typingText::after {
+    content: "|";
+    color: #00b7ff;
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+  }
+  
+  
+  @keyframes blink {
+  
+  50% {
+  opacity:0;
+  }
+  
+  }
+  
+  
+  /* ======================
+     SCROLL ANIMATION
+  ====================== */
+  
+  
+  .reveal {
+  
+  opacity:0;
+  
+  transform: translateY(80px);
+  
+  transition: 1s ease;
+  
+  }
+  
+  
+  .reveal.show {
+  
+  opacity:1;
+  
+  transform: translateY(0);
+  
+  }
+
+/* TABLET RESPONSIVE */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 24px 40px;
+  }
+
+  .about-text {
+    width: 56%;
+  }
+
+  .about-image {
+    width: 50%;
+    opacity: 0.65;
+  }
+
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+  .page {
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .home-page {
+    min-height: 100vh;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px 18px;
+    text-align: center;
+  }
+
+  .navbar nav {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .phone {
+    font-size: 11px;
+  }
+
+  .home-content {
+    left: 24px;
+    right: 24px;
+    top: 48%;
+    transform: translateY(-50%);
+  }
+
+  .home-content h2 {
+    font-size: 42px;
+  }
+
+  .home-content h1 {
+    font-size: 58px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+    letter-spacing: 5px;
+  }
+
+  .hero-buttons {
+    margin-top: 26px;
+  }
+
+  .btn {
+    padding: 10px 28px;
+    font-size: 13px;
+  }
+
+  .social-icons {
+    left: 24px;
+    right: 24px;
+    bottom: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-content {
+    min-height: 100vh;
+    padding: 70px 24px 90px;
+    align-items: flex-start;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-text h2,
+  .portfolio-content h2 {
+    font-size: 44px;
+  }
+
+  .about-desc {
+    margin-top: 55px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .address {
+    margin-top: 45px;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.22;
+    background-position: center top;
+  }
+
+  .resume-content {
+    padding: 70px 24px 90px;
+    gap: 35px;
+  }
+
+  .resume-column h3 {
+    font-size: 20px;
+  }
+
+  .skill span {
+    font-size: 14px;
+  }
+
+  .small-text {
+    font-size: 14px;
+  }
+
+  .timeline-item {
+    gap: 14px;
+  }
+
+  .year {
+    min-width: 46px;
+    height: 46px;
+    font-size: 11px;
+  }
+
+  .hobby-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-content {
+    padding: 70px 24px 90px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 420px) {
+  .navbar nav {
+    gap: 12px;
+  }
+
+  .navbar a {
+    font-size: 12px;
+  }
+
+  .home-content h2 {
+    font-size: 36px;
+  }
+
+  .home-content h1 {
+    font-size: 50px;
+  }
+
+  .home-content p {
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 9px 22px;
+  }
+
+  .about-text h2,
+  .portfolio-content h2 {
+    font-size: 38px;
+  }
+}
